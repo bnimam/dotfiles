@@ -21,12 +21,6 @@ brew link python3
 
 Then restart shell
 
-## Jujutsu (jj)
-
-```shell
-brew install jj
-```
-
 ## nerd font
 
 ```shell
@@ -51,6 +45,9 @@ brew install zsh-syntax-highlighting
 cd ~/dotfiles
 rm ~/.zshrc
 rm ~/.config/starship.toml
+sudo rm -rf ~/.local/state/nvim
+sudo rm -rf ~/.local/share/nvim
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
+ln -s ~/dotfiles/nvim ~/.config/nvim
 ```
