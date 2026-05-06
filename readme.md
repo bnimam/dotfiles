@@ -39,6 +39,12 @@ brew install starship
 brew install zsh-syntax-highlighting
 ```
 
+## ghostty
+
+```shell
+brew install --cask ghostty
+```
+
 ## symlink it all
 
 ```shell
@@ -50,4 +56,25 @@ sudo rm -rf ~/.local/share/nvim
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/nvim ~/.config/nvim
+ln -s ~/dotfiles/ghostty.config ~/.config/ghostty.config
 ```
+# Other Stuff
+
+Useful things on MacOS
+
+## LinearMouse
+
+Makes mouse usable on mac.
+
+```bash
+brew install --cask linearmouse
+```
+
+## OrbStack
+
+Lightweight Docker / VM / K8s emulator.
+
+```bash
+brew install orbstack
+```
+
