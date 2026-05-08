@@ -34,4 +34,16 @@ return {
             require("configs.lspconfig")
         end,
     },
+
+    {
+        "saghen/blink.cmp",
+        lazy = false,
+        opts = {
+            completion = {
+                list = {
+                    selection = { preselect = false },
+                },
+            },
+        },
+    },
 }
