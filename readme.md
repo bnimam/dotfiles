@@ -1,4 +1,4 @@
-# Install Instructions (MacOS)
+# Install Instructions
 
 ## This repo
 
@@ -7,11 +7,15 @@ Must be cloned into the root of the home dir so that
 
 ## Homebrew
 
+Best package manager, works on linux, wsl2, and macos
+
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Python
+
+Python3 is required for some of this stuff
 
 ```shell
 brew update
@@ -19,33 +23,47 @@ brew install python3
 brew link python3
 ```
 
-Then restart shell
+## Nerd font
 
-## nerd font
+Starship requires a nerd font
 
 ```shell
 brew install --cask font-0xProto-nerd-font
 ```
 
-## zsh starship
+## Zsh starship
+
+Fancy pre-configed zsh setup
 
 ```shell
 brew install starship
 ```
 
-## zsh syntax highlighting
+## Zsh syntax highlighting
+
+Live syntax highlighting while typing terminal commands
 
 ```shell
 brew install zsh-syntax-highlighting
 ```
 
-## ghostty
+## Ghostty
+
+Good terminal emulator built on zig
 
 ```shell
 brew install --cask ghostty
 ```
 
-## symlink it all
+## Neovim
+
+My IDE, config is mostly stock nvchad
+
+```bash
+brew install neovim
+```
+
+## Symlink it all
 
 ```shell
 cd ~/dotfiles
@@ -60,9 +78,9 @@ ln -s ~/dotfiles/ghostty.config ~/.config/ghostty.config
 ```
 # Other Stuff
 
-Useful things on MacOS
+Useful things
 
-## LinearMouse
+## LinearMouse (macos)
 
 Makes mouse usable on mac.
 
@@ -78,3 +96,18 @@ Lightweight Docker / VM / K8s emulator.
 brew install orbstack
 ```
 
+## Kind
+
+Lightweight K8s emulator.
+
+```bash
+brew install kind
+```
+
+## Lazygit
+
+Best git TUI in existance.
+
+```bash
+brew install lazygit
+```
