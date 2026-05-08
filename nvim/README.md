@@ -5,7 +5,7 @@ CachyOS
 sudo pacman -S --needed neovim unzip luarocks xclip wl-clipboard
 ```
 
-MacOS
+Homebrew
 ```sh
-brew install neovim unzip luarocks xclip clipboard
+brew install neovim unzip luarocks xclip clipboard luacheck
 ```
