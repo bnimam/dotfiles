@@ -49,3 +49,10 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 require("configs.float-term")
+
+-- When in terminal mode, ignore space as leader key.
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    vim.keymap.set("t", "<Space>", "<Space>", { buffer = true, nowait = true })
+  end,
+})
