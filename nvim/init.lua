@@ -35,3 +35,15 @@ require("autocmds")
 vim.schedule(function()
     require("mappings")
 end)
+
+-- remove line numbers in terminal emulator
+vim.api.nvim_create_autocmd("TermOpen", {
+    group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
+    callback = function()
+        vim.opt.number = false
+        vim.opt.relativenumber = false
+    end,
+})
+
+-- Esc exits terminal mode, then you can use normal Ctrl+W movements
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
