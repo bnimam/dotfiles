@@ -21,20 +21,10 @@ return {
 
     {
         "nvim-treesitter/nvim-treesitter",
-        event = { "BufReadPre", "BufNewFile" },
         lazy = false,
         build = ":TSUpdate",
         config = function()
             require("configs.treesitter")
-        end,
-    },
-
-    {
-        "neovim/nvim-lspconfig",
-        event = { "BufReadPre", "BufNewFile" },
-        config = function()
-            require("nvchad.configs.lspconfig").defaults()
-            require("configs.lspconfig")
         end,
     },
 

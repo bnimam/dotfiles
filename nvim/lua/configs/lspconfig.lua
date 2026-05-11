@@ -36,7 +36,7 @@ vim.lsp.config("lua_ls", { -- nvim 0.11
         Lua = {
             diagnostics = {
                 enable = false, -- Disable all diagnostics from lua_ls
-                -- globals = { "vim" },
+                globals = { "vim" },
             },
             workspace = {
                 library = {
