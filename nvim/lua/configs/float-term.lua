@@ -93,7 +93,7 @@ end
 local function attach_keymaps(buf)
     local opts = { buffer = buf, nowait = true, silent = true }
 
-    vim.keymap.set({ "t", "n" }, "q", close_float, opts)
+    vim.keymap.set("n", "q", close_float, opts)
     vim.keymap.set({ "t", "n" }, "<S-Tab>", function()
         cycle_tab(-1)
     end, opts)
