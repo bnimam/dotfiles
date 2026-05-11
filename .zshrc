@@ -1,4 +1,5 @@
 alias ll="ls -la --color=auto"
+alias lg="lazygit"
 
 autoload -U compinit
 compinit

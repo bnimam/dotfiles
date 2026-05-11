@@ -106,7 +106,10 @@ local function attach_keymaps(buf)
         if line_is_empty() then
             cycle_tab(1)
         else
-            vim.api.nvim_feedkeys("\t", "t", false)
+            local chan = vim.b.terminal_job_id
+            if chan then
+                vim.api.nvim_chan_send(chan, "\t")
+            end
         end
     end, opts)
 end
