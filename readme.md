@@ -31,6 +31,14 @@ Starship requires a nerd font
 brew install --cask font-0xProto-nerd-font
 ```
 
+# Zsh
+
+Fancy shell
+
+```shell
+brew install zsh
+```
+
 ## Zsh starship
 
 Fancy pre-configed zsh setup
