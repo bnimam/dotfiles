@@ -3,7 +3,6 @@ alias lg="lazygit"
 
 autoload -U compinit
 compinit
-source <(jj util completion zsh)
 
 if [[ "$(uname)" == "Linux" ]]; then
   # Linuxbrew

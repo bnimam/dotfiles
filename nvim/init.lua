@@ -48,6 +48,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 -- Esc exits terminal mode, then you can use normal Ctrl+W movements
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode", nowait = true })
 
 require("configs.float-term")

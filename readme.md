@@ -83,6 +83,7 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/ghostty.config ~/.config/ghostty.config
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ```
 # Other Stuff
 
