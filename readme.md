@@ -59,8 +59,16 @@ brew install zsh-syntax-highlighting
 
 Good terminal emulator built on zig
 
+MacOS
+
 ```shell
 brew install --cask ghostty
+```
+
+Other
+
+```shell
+snap install ghostty --classic
 ```
 
 ## Neovim
@@ -74,15 +82,12 @@ brew install neovim
 ## Symlink it all
 
 ```shell
-cd ~/dotfiles
 rm ~/.zshrc
-rm ~/.config/starship.toml
 sudo rm -rf ~/.local/state/nvim
 sudo rm -rf ~/.local/share/nvim
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/nvim ~/.config/nvim
-ln -s ~/dotfiles/ghostty.config ~/.config/ghostty.config
+ln -s ~/dotfiles/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ```
 # Other Stuff
