@@ -6,12 +6,7 @@
 local M = {}
 
 M.base46 = {
-    theme = "chadracula",
-    hl_add = {
-        -- quick-scope: highlight first-occurrence letters for f/F/t/T motions
-        QuickScopePrimary   = { underline = true, bold = true, fg = "#ff007c" },
-        QuickScopeSecondary = { underline = true, bold = true, fg = "#00dfff" },
-    },
+    theme = "eldritch",
 }
 
 -- M.nvdash = { load_on_startup = true }
