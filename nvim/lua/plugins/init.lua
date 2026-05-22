@@ -119,13 +119,13 @@ return {
         "unblevable/quick-scope",
         lazy = false,
         init = function()
-            vim.g.qs_buftype_blacklist = {'terminal', 'nofile'}
+            vim.g.qs_buftype_blacklist = { "terminal", "nofile" }
         end,
         config = function()
             -- Force underline highlights — NvChad hl_add can race with quick-scope's
             -- ColorScheme autocmd, so we own this explicitly.
             local function qs_hi()
-                vim.api.nvim_set_hl(0, "QuickScopePrimary",   { fg = "#ff007c", bold = true, underline = true })
+                vim.api.nvim_set_hl(0, "QuickScopePrimary", { fg = "#ff007c", bold = true, underline = true })
                 vim.api.nvim_set_hl(0, "QuickScopeSecondary", { fg = "#00dfff", bold = true, underline = true })
             end
             qs_hi()
@@ -134,5 +134,10 @@ return {
                 callback = qs_hi,
             })
         end,
+    },
+
+    {
+        "karb94/neoscroll.nvim",
+        opts = {},
     },
 }

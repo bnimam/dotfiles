@@ -2,6 +2,8 @@ local options = {
     formatters_by_ft = {
         lua = { "stylua" },
         python = { "isort", "black" },
+        terraform = { "terraform_fmt" },
+        ["terraform-vars"] = { "terraform_fmt" },
     },
 
     formatters = {

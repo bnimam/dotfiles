@@ -11,6 +11,8 @@ local options = {
         "vimdoc",
         "yaml",
         "python",
+        "terraform",
+        "hcl",
     },
 
     highlight = {
