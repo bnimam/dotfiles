@@ -51,3 +51,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode", nowait = true })
 
 require("configs.float-term")
+
+-- Better mouse scrolling
+vim.api.nvim_set_keymap("n", "<ScrollWheelUp>", "<C-y>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<ScrollWheelDown>", "<C-e>", { noremap = true, silent = true })
