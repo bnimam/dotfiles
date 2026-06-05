@@ -7,6 +7,9 @@ local M = {}
 
 M.base46 = {
     theme = "cobalt",
+    -- map @lsp.type.* semantic token groups (parameter -> @variable.parameter etc.)
+    -- so basedpyright's semantic tokens pick up theme colors
+    integrations = { "semantic_tokens" },
 }
 
 -- M.nvdash = { load_on_startup = true }

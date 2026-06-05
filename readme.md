@@ -31,28 +31,44 @@ Starship requires a nerd font
 brew install --cask font-0xProto-nerd-font
 ```
 
-# Zsh
+# Fish
 
-Fancy shell
+Shell. Config mirrors CachyOS fish setup (`fish/config.fish`).
 
 ```shell
-brew install zsh
+brew install fish
 ```
 
-## Zsh starship
+Make it the default shell:
 
-Fancy pre-configed zsh setup
+```shell
+echo (which fish) | sudo tee -a /etc/shells
+chsh -s (which fish)
+```
+
+## eza (optional)
+
+Powers the CachyOS-style `ls`/`ll`/`la`/`lt` aliases. Without it, `ll`/`la`
+fall back to plain `ls`.
+
+```shell
+brew install eza
+```
+
+## fastfetch (optional)
+
+Shown as the fish greeting, like CachyOS.
+
+```shell
+brew install fastfetch
+```
+
+## Starship
+
+Fancy cross-shell prompt. Initialized in `fish/config.fish`.
 
 ```shell
 brew install starship
-```
-
-## Zsh syntax highlighting
-
-Live syntax highlighting while typing terminal commands
-
-```shell
-brew install zsh-syntax-highlighting
 ```
 
 ## Ghostty
@@ -82,13 +98,14 @@ brew install neovim
 ## Symlink it all
 
 ```shell
-rm ~/.zshrc
 sudo rm -rf ~/.local/state/nvim
 sudo rm -rf ~/.local/share/nvim
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/nvim ~/.config/nvim
-ln -s ~/dotfiles/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
+mkdir -p ~/.config/ghostty
+ln -s ~/dotfiles/ghostty/config ~/.config/ghostty/config
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+mkdir -p ~/.config/fish
+ln -sf ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
 ```
 # Other Stuff
 

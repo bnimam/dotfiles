@@ -66,13 +66,14 @@ M.base_16 = {
 -- generic base16 slot meanings (base46 routes many groups through base08/0A).
 M.polish_hl = {
   treesitter = {
-    ["@variable"]            = { fg = M.base_30.lavender },   -- #e1efff
+    ["@variable"]            = { fg = M.base_30.white },      -- semantic variable #fff
     ["@variable.member"]     = { fg = M.base_30.cyan },       -- semantic property #9effff
     ["@variable.member.key"] = { fg = M.base_30.cyan },
     ["@property"]            = { fg = M.base_30.cyan },
     ["@module"]              = { fg = M.base_30.lavender },
-    ["@variable.parameter"]  = { fg = M.base_30.lavender },
-    ["@variable.builtin"]    = { fg = M.base_30.pink },       -- this/self #fb94ff
+    ["@variable.parameter"]  = { fg = M.base_30.lavender },   -- params fall back to textmate variable #e1efff
+    ["@variable.builtin"]    = { fg = M.base_30.pink },       -- this #fb94ff
+    ["@variable.builtin.python"] = { fg = M.base_30.cyan },   -- self/cls #9effff (cobalt2 python rule)
 
     ["@function"]            = { fg = M.base_30.yellow },     -- #ffc600
     ["@function.call"]       = { fg = M.base_30.yellow },

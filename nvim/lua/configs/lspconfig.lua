@@ -8,13 +8,12 @@ local lspconfig = require("nvchad.configs.lspconfig") -- nvim 0.11
 -- list of all servers configured.
 lspconfig.servers = {
     "lua_ls",
-    "pyright",
+    "basedpyright",
     "terraformls",
 }
 
 -- list of servers configured with default config.
 local default_servers = {
-    "pyright",
     "terraformls",
 }
 
@@ -27,6 +26,25 @@ for _, lsp in ipairs(default_servers) do
         capabilities = capabilities,
     })
 end
+
+-- basedpyright: pyright fork with semantic tokens (parameter highlighting at
+-- usage sites, like Pylance). Pin typeCheckingMode to "standard" — its
+-- "recommended" default is much noisier than pyright's.
+-- NOTE: deliberately no nvchad on_init here — nvchad's on_init disables
+-- semantic tokens, which we want from this server.
+vim.lsp.config("basedpyright", {
+    on_attach = on_attach,
+    on_init = function() end, -- override nvchad's token-disabling on_init from vim.lsp.config("*")
+    capabilities = capabilities,
+
+    settings = {
+        basedpyright = {
+            analysis = {
+                typeCheckingMode = "standard",
+            },
+        },
+    },
+})
 
 -- lspconfig.lua_ls.setup({ -- pre nvim 0.11
 vim.lsp.config("lua_ls", { -- nvim 0.11
