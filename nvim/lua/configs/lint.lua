@@ -2,7 +2,7 @@ local lint = require("lint")
 
 lint.linters_by_ft = {
     lua = { "luacheck" },
-    python = { "flake8" },
+    python = { "ruff" },
 }
 
 lint.linters.luacheck.args = {
