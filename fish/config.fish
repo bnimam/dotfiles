@@ -1,3 +1,14 @@
+## gcloud: force a supported Python (system python3 is 3.9, too old for gcloud)
+if not set -q CLOUDSDK_PYTHON
+    for _py in /opt/homebrew/bin/python3.11 /usr/bin/python3
+        if test -x $_py
+            set -gx CLOUDSDK_PYTHON $_py
+            break
+        end
+    end
+    set -e _py
+end
+
 if not status is-interactive
     exit
 end
@@ -17,6 +28,7 @@ end
 
 ## PATH
 fish_add_path $HOME/.local/bin $HOME/.cargo/bin
+fish_add_path /usr/local/clamav/bin /usr/local/clamav/sbin
 
 ## Linux-specific setup
 if test (uname) = Linux
